@@ -1,0 +1,70 @@
+<h1>File Information</h1>
+
+<%#= link_to "Back", metro_files_path %> <br>
+<%#= link_to "File Detail", metro_file_instances_path(@metro_file.id)%> <br>
+<%#= link_to "File Metrics", metro_file_metric_path(@metro_file.id)%>
+
+<h3>File Information from Header and Trailer</h3>
+
+<ul style="list-style: none;">
+    <li>Date Uploaded: <%= link_to nice_date(@metro_file.created_at), metro_file_instances_path(@metro_file.id) %></li>
+    <!--<li><%#= @metro_file.record_identifer %></li>-->
+    <li>Cycle Identifier: <%= @metro_file.cycle_identifier %></li>
+    <li>Innovis Program Identifier: <%= @metro_file.innovis_program_identifier %></li>
+    <li>Equifax Program Identifier: <%= @metro_file.equifax_program_identifer %></li>
+    <li>Experian Program Identifier: <%= @metro_file.experian_program_identifier %></li>
+    <li>TransUnion Program Identifier: <%= @metro_file.transunion_program_identifier %></li>
+    <li>Activity Date: <%= @metro_file.activity_date %></li>
+    <li>Date File Created: <%= @metro_file.date_file_created %></li>
+    <li>Program Date: <%= @metro_file.program_date %></li>
+    <li>Program Revision Date: <%= @metro_file.program_revision_date %></li>
+    <li>Reporter Name: <%= @metro_file.reporter_name %></li>
+    <li>Reporter Address: <%= @metro_file.reporter_address %></li>
+    <li>Reporter Phone Number: <%= number_to_phone(@metro_file.reporter_telephone_number) %></li>
+    <li>Software Vendor Name: <%= @metro_file.software_vendor_name %></li>
+    <li>Software Version: <%= @metro_file.software_version_number %></li>
+    <li>Microbilt Program Identifier: <%= @metro_file.microbilt_prbc_program_identifer %></li>
+    <li>Total Base Records: <%=number_with_delimiter(@metro_file.total_base_records) %></li>
+    <li>Total DF Status Codes: <%= number_with_delimiter(@metro_file.total_status_df) %></li>
+    <li>Total J1 Records: <%= number_with_delimiter(@metro_file.total_associated_j1) %></li>
+    <li>Total J2 Records: <%= number_with_delimiter(@metro_file.total_associated_j2) %></li>
+    <li>Block Count: <%= number_with_delimiter(@metro_file.block_count) %></li>
+    <li>Total Status DA: <%= number_with_delimiter(@metro_file.total_status_da) %></li>
+    
+    <li>Total Status 11: <%= @metro_file.total_status_11 %></li>
+    <li>Total Status 13: <%= @metro_file.total_status_13 %></li>
+    <li>Total Status 61: <%= @metro_file.total_status_61 %></li>
+    <li>Total Status 62: <%= @metro_file.total_status_62 %></li>
+    <li>Total Status 63: <%= @metro_file.total_status_63 %></li>
+    <li>Total Status 64: <%= @metro_file.total_status_64 %></li>
+    <li>Total Status 65: <%= @metro_file.total_status_65 %></li>
+    <li>Total Status 71: <%= @metro_file.total_status_71 %></li>
+    <li>Total Status 78: <%= @metro_file.total_status_78 %></li>
+    <li>Total Status 80: <%= @metro_file.total_status_80 %></li>
+    <li>Total Status 82: <%= @metro_file.total_status_82 %></li>
+    <li>Total Status 83: <%= @metro_file.total_status_83 %></li>
+    <li>Total Status 84: <%= @metro_file.total_status_84 %></li>
+    <li>Total Status 88: <%= @metro_file.total_status_88 %></li>
+    <li>Total Status 89: <%= @metro_file.total_status_89 %></li>
+    <li>Total Status 93: <%= number_with_delimiter(@metro_file.total_status_93) %></li>
+    <li>Total Status 94: <%= @metro_file.total_status_94 %></li>
+    <li>Total Status 95: <%= @metro_file.total_status_95 %></li>
+    <li>Total Status 96: <%= @metro_file.total_status_96 %></li>
+    <li>Total Status 97: <%= @metro_file.total_status_97 %></li>
+    <li>Total ECOA Z: <%= @metro_file.total_ecoa_z %></li>
+    <li>Total Employment Segments: <%= number_with_delimiter(@metro_file.total_employment_segments) %></li>
+    <li>Total Original Creditor Segments: <%= number_with_delimiter(@metro_file.total_original_creditor_segments) %></li>
+    <li>Total Purchased Sold Segments: <%= number_with_delimiter(@metro_file.total_purchased_sold_segments) %></li>
+    <li>Total Mortgage Segments: <%= number_with_delimiter(@metro_file.total_mortgage_segments) %></li>
+    <li>Total Specialized Payment Segments: <%= number_with_delimiter(@metro_file.total_specialized_payment_segments) %></li>
+    <li>Total Change Segments: <%= number_with_delimiter(@metro_file.total_change_segments) %></li>
+    <li>Total SSNs All Segments: <%= number_with_delimiter(@metro_file.total_ssns_all_segments) %></li>
+    <li>Total SSNs Base Segment: <%= number_with_delimiter(@metro_file.total_ssns_base_segment) %></li>
+    <li>Total SSNs J1 Segment: <%= number_with_delimiter(@metro_file.total_ssn_j1) %></li>
+    <li>Total SSNs J2 Segment: <%= number_with_delimiter(@metro_file.total_ssn_j2) %></li>
+    <li>Total DOB All Segments: <%= number_with_delimiter(@metro_file.total_dob_all) %></li>
+    <li>Total DOB J1 Segment: <%= number_with_delimiter(@metro_file.total_dob_j1) %></li>
+    <li>Total DOB J2 Segment: <%= number_with_delimiter(@metro_file.total_dob_j2) %></li>
+    <li>Total Phone Numbers All Segments: <%= number_with_delimiter(@metro_file.total_phone_numbers_all_segments) %></li>
+</ul>
+

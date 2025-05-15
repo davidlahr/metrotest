@@ -1,0 +1,47 @@
+<h1>Metrics</h1>
+<%#= link_to "Back to File", @metrofile%>
+
+<h3>Count by Status</h3>
+
+<ul>
+    <% @statuses.each do |key, value| %>
+        <li> <%= key %> <%= number_with_delimiter(value) %></li>
+    <% end %>
+</ul>
+
+<!--<h3>Bad SSNS</h3>
+<ul>
+<%#= @bad_ssns.count %>-->
+    <%# @bad_ssns.each do |i| %>
+<!--    <li><%#= i.social_security_number %></li>-->
+<%# end %>
+<!--</ul>-->
+
+<h3>Red Flags</h3>
+<ul>
+    <li> <%= @minors.count %> Consumers under the age of 18 <%= link_to "View", metro_file_minors_path %></li> 
+    <li> <%=pluralize(@bad_ssns.count, "Invalid SSN")%> <%= link_to "View", metro_file_invalid_ssns_path %> </li>
+    
+    <li> <%= @state_meds.count %> Medical Accounts in Prohibited States <%= link_to "View", metro_file_medical_states_path %> </li>
+    <li> <%= @balance_meds.count %> Medical Accounts under $500 <%= link_to "View", metro_file_medical_balance_path	 %> </li>
+    <li> <%= @no_names.count %> Accounts with Incomplete Names <%= link_to "View", metro_file_missing_names_path %></li>
+    <li> <%= @no_dob_or_ssns.count %> Accounts with no SSN and no DOB <%= link_to "View", metro_file_no_dob_or_ssns_path %></li>
+    <li> <%= @dofds.count %> Accounts with DOFD greater than Date Opened <%= link_to "View", metro_file_bad_dofds_path %></li>
+
+
+</ul>
+
+<h3>Dispute Summary</h3>
+<ul>
+    <% @compliance_condition_codes.each do |key, value|%>
+        <li><%= key %> <%= number_with_delimiter(value) %> <%= link_to "View", metro_file_disputes_path(compliance_condition_code: key)%> </li>
+    <% end %>
+</ul>
+
+<h3>Special Comment Code Summary</h3>
+<ul>
+    <% @special_comments.each do |key, value| %>
+        <li> <%= key %> <%= value %> <%= link_to "View", metro_file_comments_path(special_comment: key)%> </li>
+    <% end %>
+</ul>
+

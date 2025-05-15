@@ -1,0 +1,56 @@
+<h3>List Of</h3>
+<%#= link_to "Back", metro_file_path(24) %>
+<%#= link_to "Back", @metrofile %>
+<%#= link_to "File Detail", metro_files_path %>
+
+<div>
+<%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
+    <%== pagy_nav(@pagy) %>
+</div>
+    <table class="table-tight">
+        <tr>
+            <th>Account Number</th>
+            <th>File Date</th>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Status</th>
+            <th>DOFD</th>
+            <th>Date Opened</th>
+            <th>Current Balance</th>
+            <th>Original Creditor</th>
+            <th>Cred Class</th>
+            <th>CCC</th>
+        </tr>
+    
+        <% @instances.each do |instance| %>
+        <tr>
+            <td><%= link_to instance.consumer_account_number, metro_file_instance_path(id: instance.id) %> </td>
+            <td><%= basic_date(instance.created_at) %> </td>
+            <td><%= instance.surname %></td>
+            <td><%= instance.first_name %></td>
+            <td><%= instance.account_status %> </td>
+            <td><%= basic_date(instance.date_of_first_delinquency) %> </td>
+            <td><%= basic_date(instance.date_opened) %> </td>
+            <td><%= number_to_currency(instance.current_balance) %></td>
+            <td><%= instance.original_creditor%></td>
+            <td><%= instance.creditor_classification%></td>
+            <!--<td><%#= instance.actual_payment_amount %> </td>-->
+            <!--<td><%#= instance.special_comment %> </td>-->
+            <td><%= instance.compliance_condition_code %> </td>
+            
+
+            <!--<td><%#= instance.created_at %></td>-->
+            <%#= link_to instance.metro_file_id, metro_file_path(instance.metro_file_id) %>
+            <!--</li>-->
+        </tr>
+        <% end %>
+    </table>
+
+<!--</ul>-->
+
+
+
+
+<%# Note the double equals sign "==" which marks the output as trusted and html safe: %>
+<%#== pagy_bulma_combo_nav_js(@pagy) %>
+

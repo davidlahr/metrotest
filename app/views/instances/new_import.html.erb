@@ -1,0 +1,9 @@
+<h1>Import File</h1>
+
+<%= form_tag file_path , multipart: true do%>
+  <%= file_field_tag :import_file %>
+  <%= submit_tag "Upload File"%>
+<% end %>
+<br>
+<%= link_to "Back to List", instances_path  %>
+  

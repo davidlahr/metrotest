@@ -1,0 +1,41 @@
+<h1>Uploaded Files</h1>
+
+<!--<p><%#= link_to "Import New File", metrofile_path%></p>-->
+
+<%# @metro_files.each do |metro_file| %>
+<!--    <ul style="list-style: none;">
+
+        <li>
+        <%#= link_to metro_file.id, metro_file%>-->
+        <%#= date_with_time(metro_file.created_at) %> 
+        <%#= metro_file.reporter_name %> 
+        <%#= metro_file.date_file_created %>
+<!--        
+        </li>
+</ul>
+<%# end %>-->
+
+<div>
+<table>
+    <tr>
+        <th>File ID</th>
+        <th>Date Uploaded</th>
+        <th>Reporter Name</th>
+        <th>Date File Created</th>
+        <th>Total Base Records</th>
+        <th>Delete File</th>
+    </tr>
+    <% @metro_files.each do |metro_file| %>
+    <tr>
+        <td><%= link_to metro_file.id, metro_file%></td>
+        <td><%= date_with_time(metro_file.created_at) %></td>
+        <td><%= metro_file.reporter_name %></td>
+        <td><%= nice_date(metro_file.date_file_created) %></td>
+        <td><%= number_with_delimiter(metro_file.total_base_records) %></td>
+        <td><%= link_to "Delete", metro_file, class:"button", data: {turbo_method: :delete, turbo_confirm: "Permanently Delete File?"} %></td>
+
+    </tr>
+    <% end %>
+</table>
+</div>
+

@@ -1,0 +1,30 @@
+<h1> Users </h1>
+
+</div>
+    <table class="table-tight">
+        <tr>
+            <th>Company</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>email</th>
+            <th>Role</th>
+            <th>Create Date</th>
+            <th>Edit</th>
+            
+            
+        </tr>
+    
+        <% @users.each do |user| %>
+        <tr>
+            
+            <td><%= user.company.name %></td>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.role %></td>
+            <td><%= nice_date(user.created_at) %></td>
+            <td> <%= link_to "Edit", user %> </td>
+            
+        </tr>
+        <% end %>
+    </table>

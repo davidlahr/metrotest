@@ -1,0 +1,36 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Companies</h1>
+
+<div id="companies">
+  <table class="table-tight">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Extra Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Zip Code</th>
+        <th>Contact</th>
+        <th>Phone</th>
+        <th>Edit</th>
+      </tr>
+    <% @companies.each do |company| %>
+
+      <tr>
+        <td><%=company.name %></td>
+        <td><%=company.street_address %></td>        
+        <td><%=company.extra_address %></td>
+        <td><%=company.city %></td>
+        <td><%=company.state %></td>
+        <td><%=company.zip %></td>
+        <td><%=company.contact %></td>
+        <td><%=company.phone %></td>
+
+        <td><%= link_to "Show this company", company %></td>
+    </tr> 
+  <% end %>
+  </table>
+</div>
+
+<%= link_to "New company", new_company_path %>

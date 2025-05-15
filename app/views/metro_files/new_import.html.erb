@@ -1,0 +1,9 @@
+<h1>Import New File</h1>
+
+<%= form_tag metrofile_path , multipart: true do%>
+  <%= file_field_tag :import_file %>
+  <%= submit_tag "Upload File"%>
+<% end %>
+<br>
+<%= link_to "Back to List", metro_files_path  %>
+  

@@ -1,0 +1,47 @@
+class AddManyColumnsToInstances < ActiveRecord::Migration[7.1]
+  def change
+    add_column :instances, :record_descriptor, :string
+    add_column :instances, :processing_indicator, :string
+    add_column :instances, :time_stamp, :datetime
+    add_column :instances, :correction_indicator, :string
+    add_column :instances, :identification_number, :string
+    add_column :instances, :cycle_identifier, :string
+    add_column :instances, :portfolio_type, :string
+    add_column :instances, :account_type, :string
+    add_column :instances, :credit_limit, :integer
+    add_column :instances, :terms_duration, :string
+    add_column :instances, :terms_frequency, :string
+    add_column :instances, :scheduled_monthly_payment_amount, :integer
+    add_column :instances, :actual_payment_amount, :integer
+    add_column :instances, :payment_rating, :string
+    add_column :instances, :payment_history_profile, :string
+    add_column :instances, :special_comment, :string
+    add_column :instances, :compliance_condition_code, :string
+    add_column :instances, :current_balance, :integer
+    add_column :instances, :amount_past_due, :integer
+    add_column :instances, :original_charge_off_amount, :integer
+    add_column :instances, :billing_date, :date
+    add_column :instances, :date_of_first_delinquency, :date
+    add_column :instances, :date_closed, :date
+    add_column :instances, :date_of_last_payment, :date
+    add_column :instances, :reserved, :string
+    add_column :instances, :consumer_transaction_type, :string
+    add_column :instances, :surname, :string
+    add_column :instances, :first_name, :string
+    add_column :instances, :middle_name, :string
+    add_column :instances, :generation_code, :string
+    add_column :instances, :social_security_number, :integer
+    add_column :instances, :date_of_birth, :date
+    add_column :instances, :telephone_number, :integer
+    add_column :instances, :ecoa_code, :string
+    add_column :instances, :consumer_information_indicator, :string
+    add_column :instances, :country_code, :string
+    add_column :instances, :first_line_of_address, :string
+    add_column :instances, :second_line_of_address, :string
+    add_column :instances, :city, :string
+    add_column :instances, :state, :string
+    add_column :instances, :postal_zip_code, :string
+    add_column :instances, :address_indicator, :string
+    add_column :instances, :residence_code, :string
+  end
+end

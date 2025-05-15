@@ -1,0 +1,62 @@
+<h1>Instance</h1>
+
+
+<ul class="menu", style="list-style: none;">
+    <li>Consumer Account Number: <%= @instance.consumer_account_number %></li>
+    <li>Last Name: <%= @instance.surname %></li>
+    <li>First Name: <%= @instance.first_name %></li>
+    <li>Middle Name: <%= @instance.middle_name %></li>
+    <li>Generation Code: <%= @instance.generation_code %></li>
+    <li>SSN: <%= @instance.social_security_number %></li>
+    <li>Date Of Birth: <%= @instance.date_of_birth %></li>
+    <li>Phone Number: <%= @instance.telephone_number %></li>
+    <br>
+    <li>Address 1: <%= @instance.first_line_of_address %></li>
+    <li>Address 2: <%= @instance.second_line_of_address %></li>
+    <li>City: <%= @instance.city %></li>
+    <li>State: <%= @instance.state %></li>
+    <li>Zip Code: <%= @instance.postal_zip_code %></li>
+    <li>Country Code: <%= @instance.country_code %></li>
+    <li>Address Indicator: <%= @instance.address_indicator %></li>
+    <li>Residence Code: <%= @instance.residence_code %></li>
+    <br>
+    <li>Original Creditor: <%= @instance.original_creditor %></li>
+    <li>Creditor Classification: <%= @instance.creditor_classification %></li>
+    <li>Portfolio Type: <%= @instance.portfolio_type %></li>
+    <li>Account Type: <%= @instance.account_type %></li>
+    <li>EOCA Code: <%= @instance.ecoa_code %></li>
+    <li>Account Status: <%= @instance.account_status %></li>
+    <li>Special Comment: <%= @instance.special_comment %></li>
+    <li>Compliance Code Condition: <%= @instance.compliance_condition_code %></li>
+    <br>
+    <li>Date Opened: <%= @instance.date_opened %></li>
+    <li>Date of First Delinquency: <%= @instance.date_of_first_delinquency %></li>
+    <li>Billing Date: <%= @instance.billing_date %></li>
+    <li>Date Closed: <%= @instance.date_closed %></li>
+    <li>Last Payment Date: <%= @instance.date_of_last_payment %></li>  
+     <br>
+    <li>Highest Credit/Original Amount: <%= @instance.highest_credit_or_original_loan_amount %></li>
+    <li>Current Balance: <%= @instance.current_balance %></li>
+    <li>Amount Past Due: <%= @instance.amount_past_due %></li>
+    <li>Original Charge Off Amt: <%= @instance.original_charge_off_amount %></li>
+    <br>
+    <li>Credit Limit: <%= @instance.credit_limit %></li>
+    <li>Terms Duration: <%= @instance.terms_duration %></li>
+    <li>Terms Frequency: <%= @instance.terms_frequency %></li>
+    <li>Scheduled Monthly Payment Amount: <%= @instance.scheduled_monthly_payment_amount %></li>
+    <li>Actual Payment Amount: <%= @instance.actual_payment_amount %></li>
+    <li>Payment Rating: <%= @instance.payment_rating %></li>
+    <li>Payment History Profile: <%= @instance.payment_history_profile %></li>
+    <br>
+    <!--<li><%#= @instance.record_descriptor %></li>-->
+    <li>Processing Indicator: <%= @instance.processing_indicator %></li>
+    <!--<li>Time Stamp: <%#= @instance.time_stamp %></li>-->
+    <li>Correction Indicator: <%= @instance.correction_indicator %></li>
+    <li>Identification Number: <%= @instance.identification_number %></li>
+    <li>Cycle Identifier: <%= @instance.cycle_identifier %></li>
+    <!--<li><%#= @instance.reserved %></li>-->
+    <li>Transaction Type: <%= @instance.consumer_transaction_type %></li>
+    <li>Consumer Information Indicator: <%= @instance.consumer_information_indicator %></li>
+ </ul>
+
+<%= link_to "Back", metro_file_instances_path %>
