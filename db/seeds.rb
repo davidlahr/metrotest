@@ -9,23 +9,26 @@
 #   end
 #   
 
-Company.create!(
-  name: "Kruger Industrial Smoothing",
-  street_address: "405 Morningview Ave",
-  city: "Pickerington",
-  state: "OH",
-  zip: "43147",
-  contact: "Jeff Wheeler"
-)
+# Company.create!(
+#   name: "Kruger Industrial Smoothing",
+#   street_address: "405 Morningview Ave",
+#   city: "Pickerington",
+#   state: "OH",
+#   zip: "43147",
+#   contact: "Jeff Wheeler"
+# )
 
 
-User.create!(
-    email: "david@example.com",
-    first_name: "David",
-    last_name: "Lahr",
-    password: "secret",
-    role: "Super-Admin",
-    company_id: 1
-    )
+# User.create!(
+#     email: "david@example.com",
+#     first_name: "David",
+#     last_name: "Lahr",
+#     password: "secret",
+#     role: "Site-Admin",
+#     company_id: 1
+#     )
+
+user = User.find_by(email: "david@example.com")
+user.role = "Site-Admin"
 
 

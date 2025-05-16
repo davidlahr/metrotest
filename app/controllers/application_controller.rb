@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
 
   def is_super_admin
     if current_user
-      unless current_user.role == "Super_Admin"
+      unless current_user.role == "Site-Admin"
         redirect_to metro_files_url, notice: "Action Requires Site Admin"
       end
     else redirect_to new_user_session_url, notice: "Please Sign In"
