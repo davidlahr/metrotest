@@ -7,3 +7,25 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+#   
+
+Company.create!(
+  name: "Kruger Industrial Smoothing",
+  street_address: "405 Morningview Ave",
+  city: "Pickerington",
+  state: "OH",
+  zip: "43147",
+  contact: "Jeff Wheeler"
+)
+
+
+User.create!(
+    email: "david@example.com",
+    first_name: "David",
+    last_name: "Lahr",
+    password: "secret",
+    role: "Super-Admin",
+    company_id: 1
+    )
+
+
