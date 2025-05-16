@@ -19,16 +19,16 @@
 # )
 
 
-# User.create!(
-#     email: "david@example.com",
-#     first_name: "David",
-#     last_name: "Lahr",
-#     password: "secret",
-#     role: "Site-Admin",
-#     company_id: 1
-#     )
+User.create!(
+    email: "james@example.com",
+    first_name: "James",
+    last_name: "Kunkle",
+    password: "secret",
+    role: "Site-Admin",
+    company_id: 1
+    )
 
-user = User.find_by(email: "david@example.com")
-user.role = "Site-Admin"
+# user = User.find_by(email: "david@example.com")
+# user.role = "Site-Admin"
 
 
