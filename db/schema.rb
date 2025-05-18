@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_01_132149) do
+ActiveRecord::Schema[7.1].define(version: 2025_05_18_123523) do
   create_table "companies", force: :cascade do |t|
     t.string "name"
     t.string "street_address"
@@ -95,7 +95,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_03_01_132149) do
     t.date "program_revision_date"
     t.string "reporter_name"
     t.string "reporter_address"
-    t.integer "reporter_telephone_number"
+    t.string "reporter_telephone_number"
     t.string "software_vendor_name"
     t.string "software_version_number"
     t.string "microbilt_prbc_program_identifer"

@@ -6,6 +6,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
- ROLE_OPTIONS = %w(Super-Admin Admin User)
+ ROLE_OPTIONS = %w(Site-Admin Admin User)
 
 end
